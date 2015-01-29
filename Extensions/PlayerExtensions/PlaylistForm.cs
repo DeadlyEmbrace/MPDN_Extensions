@@ -181,6 +181,12 @@ namespace Mpdn.PlayerExtensions.GitHub
             PlaylistCount = listBox.Items.Count;
         }
 
+        public void ClearPlaylist()
+        {
+            PlayerControl.StopMedia();
+            listBox.Items.Clear();
+        }
+
         #region Implementation
 
         private void PlaybackCompleted(object sender, EventArgs e)
